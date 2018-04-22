@@ -13,7 +13,10 @@ public class Drawing extends Figure {
     @Override
     public Figure copy() {
         Drawing d = new Drawing(this.x, this.y);
-        d.figures = new ArrayList<>(figures);
+        d.figures = new ArrayList<>();
+        for (Figure f : this.figures) {
+            d.figures.add(f.copy());
+        }
         return d;
     }
 
