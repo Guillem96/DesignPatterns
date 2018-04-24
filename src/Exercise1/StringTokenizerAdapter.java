@@ -3,7 +3,7 @@ package Exercise1;
 import java.util.Iterator;
 import java.util.StringTokenizer;
 
-public class StringTokenizerAdapter extends StringTokenizer implements Iterator {
+public class StringTokenizerAdapter extends StringTokenizer implements Iterator<Object> {
     public StringTokenizerAdapter(String s, String s1, boolean b) {
         super(s, s1, b);
     }
