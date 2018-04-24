@@ -1,8 +1,8 @@
 package Exericice6;
 
 public abstract class Figure {
-    private float x;
-    private float y;
+    protected float x;
+    protected float y;
 
     Figure(float x, float y) {
         this.x = x;
