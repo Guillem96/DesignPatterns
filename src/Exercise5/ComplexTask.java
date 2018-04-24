@@ -3,8 +3,8 @@ package Exercise5;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComplexTask implements Task {
-    private List<Task> tasks;
+public abstract class ComplexTask implements Task {
+    protected List<Task> tasks;
 
     public ComplexTask() {
         this.tasks = new ArrayList<>();
@@ -26,13 +26,6 @@ public class ComplexTask implements Task {
     }
 
     @Override
-    public int durationInDays() {
-        int duration = 0;
-
-        for(Task t : tasks)
-            duration += t.durationInDays();
-
-        return duration;
-    }
+    public abstract int durationInDays();
 
 }
