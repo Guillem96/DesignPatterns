@@ -1,8 +1,8 @@
 package Exericice6;
 
 public class Rectangle extends Figure {
-    protected float width;
-    protected float height;
+    private float width;
+    private float height;
 
     public Rectangle(float x, float y, float width, float height) {
         super(x, y);
