@@ -1,4 +1,4 @@
-package Exericice6;
+package Exercise6;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,11 +11,11 @@ public class Drawing extends Figure {
     }
 
     @Override
-    public Figure copy() {
+    public Figure deepCopy() {
         Drawing d = new Drawing(this.x, this.y);
         d.figures = new ArrayList<>();
         for (Figure f : this.figures) {
-            d.figures.add(f.copy());
+            d.figures.add(f.deepCopy());
         }
         return d;
     }

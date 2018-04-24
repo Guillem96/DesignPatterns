@@ -1,4 +1,4 @@
-package Exericice6;
+package Exercise6;
 
 public class Circle extends Figure {
     private float r;
@@ -9,7 +9,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public Circle copy() {
+    public Circle deepCopy() {
         return new Circle(x, y, r);
     }
 }

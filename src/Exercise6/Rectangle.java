@@ -1,4 +1,4 @@
-package Exericice6;
+package Exercise6;
 
 public class Rectangle extends Figure {
     private float width;
@@ -11,7 +11,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public Rectangle copy() {
+    public Rectangle deepCopy() {
         return new Rectangle(x, y, width, height);
     }
 }

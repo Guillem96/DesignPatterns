@@ -1,4 +1,4 @@
-package Exercice1;
+package Exercise1;
 
 import java.util.Iterator;
 import java.util.StringTokenizer;

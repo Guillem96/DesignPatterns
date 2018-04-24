@@ -1,4 +1,4 @@
-package Exericice6;
+package Exercise6;
 
 public abstract class Figure {
     protected float x;
@@ -9,5 +9,9 @@ public abstract class Figure {
         this.y = y;
     }
 
-    public abstract Figure copy();
+    public Figure copy() {
+        return this;
+    }
+
+    public abstract Figure deepCopy();
 }

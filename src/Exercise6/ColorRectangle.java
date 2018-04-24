@@ -1,4 +1,4 @@
-package Exericice6;
+package Exercise6;
 
 import java.awt.*;
 
@@ -11,7 +11,7 @@ public class ColorRectangle extends Rectangle {
     }
 
     @Override
-    public ColorRectangle copy() {
+    public ColorRectangle deepCopy() {
         return new ColorRectangle(x, y, width, height, c);
     }
 }

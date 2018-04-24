@@ -1,4 +1,4 @@
-package Exericice6;
+package Exercise6;
 
 public class Line extends Figure {
     private float x2;
@@ -11,7 +11,7 @@ public class Line extends Figure {
     }
 
     @Override
-    public Line copy() {
+    public Line deepCopy() {
         return new Line(x, y, x2, y2);
     }
 }
