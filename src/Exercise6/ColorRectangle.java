@@ -10,8 +10,13 @@ public class ColorRectangle extends Rectangle {
         this.c = c;
     }
 
+    public ColorRectangle(ColorRectangle cr) {
+        super(cr);
+        this.c = cr.c;
+    }
+
     @Override
     public ColorRectangle deepCopy() {
-        return new ColorRectangle(x, y, width, height, c);
+        return new ColorRectangle(this);
     }
 }

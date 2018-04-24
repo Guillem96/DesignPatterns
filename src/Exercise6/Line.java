@@ -10,8 +10,20 @@ public class Line extends Figure {
         this.y2 = y2;
     }
 
+
+    public Line(Line l) {
+        super(l);
+        this.x2 = l.x2;
+        this.y2 = l.y2;
+    }
+
+    @Override
+    public Line copy() {
+        return this;
+    }
+
     @Override
     public Line deepCopy() {
-        return new Line(x, y, x2, y2);
+        return new Line(this);
     }
 }

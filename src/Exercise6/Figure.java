@@ -1,17 +1,20 @@
 package Exercise6;
 
 public abstract class Figure {
-    protected float x;
-    protected float y;
+    private float x;
+    private float y;
 
     Figure(float x, float y) {
         this.x = x;
         this.y = y;
     }
 
-    public Figure copy() {
-        return this;
+    Figure(Figure figure) {
+        this.x = figure.x;
+        this.y = figure.y;
     }
+
+    public abstract Figure copy() ;
 
     public abstract Figure deepCopy();
 }

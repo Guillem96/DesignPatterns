@@ -8,8 +8,19 @@ public class Circle extends Figure {
         this.r = r;
     }
 
+    public Circle(Circle c) {
+        super(c);
+        this.r = c.r;
+    }
+
+    @Override
+    public Circle copy() {
+        // Serveix si les classes son inmutables
+        return this;
+    }
+
     @Override
     public Circle deepCopy() {
-        return new Circle(x, y, r);
+        return new Circle(this);
     }
 }
