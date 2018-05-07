@@ -19,6 +19,18 @@ public class NutririonFacts {
         this.carbohydrate = carbohydrate;
     }
 
+    @Override
+    public String toString() {
+        return "NutririonFacts{" +
+                "servingSize=" + servingSize +
+                ", servings=" + servings +
+                ", calories=" + calories +
+                ", fat=" + fat +
+                ", sodium=" + sodium +
+                ", carbohydrate=" + carbohydrate +
+                '}';
+    }
+
 
     public static class Builder {
 

@@ -9,5 +9,6 @@ public class Main {
                                 .carbohydrate(200)
                                 .build();
 
+        System.out.println(nf.toString());
     }
 }
