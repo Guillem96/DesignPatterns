@@ -3,14 +3,14 @@ package Exercise12;
 public class NutririonFacts {
 
 
-    private int servingSize;
-    private int servings;
-    private int calories;
-    private int fat;
-    private int sodium;
-    private int carbohydrate;
+    private final int servingSize;
+    private final int servings;
+    private final int calories;
+    private final int fat;
+    private final int sodium;
+    private final int carbohydrate;
 
-    public NutririonFacts(int servingSize, int servings, int calories, int fat, int sodium, int carbohydrate) {
+    public NutririonFacts(final int servingSize, final int servings, final int calories, final int fat, final int sodium, final int carbohydrate) {
         this.servingSize = servingSize;
         this.servings = servings;
         this.calories = calories;
