@@ -1,7 +1,9 @@
 package Exercise9;
 
-public interface Task {
-    Money costInEuros();
-    int durationInDays();
-    boolean hasFinalized();
+import java.util.Observable;
+
+public abstract class Task extends Observable {
+    abstract Money costInEuros();
+    abstract int durationInDays();
+    abstract boolean hasFinalized();
 }

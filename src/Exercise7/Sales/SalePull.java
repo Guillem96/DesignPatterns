@@ -14,7 +14,7 @@ public class SalePull extends Sale {
         lines.add(sli);
         lastSLI = sli;
         setChanged();
-        notifyObservers(this);
+        notifyObservers();
     }
 
     @Override

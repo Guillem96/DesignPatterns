@@ -15,19 +15,21 @@ public class Main {
 
     private static void pull() {
         Logger l = new LoggerPull("resources/log-pull.txt");
-        Controller c = new Controller(l, new SalePullFactory(), new Store("Mercadona"));
-        c.startSale();
-        c.addNewItem(new ProductDescription("Milk", 10), 2);
-        c.addNewItem(new ProductDescription("Froot Loops", 20), 3);
+        Register r = new Register(new Store("Pull Store"), new SalePullFactory());
+        r.createNewSale();
+        r.addSaleObserver(l);
+        r.addNewLine(new ProductDescription("Milk", 10), 2);
+        r.addNewLine(new ProductDescription("Froot Loops", 20), 3);
         l.close();
     }
 
     private static void push() {
-        Logger l = new LoggerPush("resources/log-push.txt");
-        Controller c = new Controller(l, new SalePushFactory(), new Store("Eroski"));
-        c.startSale();
-        c.addNewItem(new ProductDescription("Milk", 10), 2);
-        c.addNewItem(new ProductDescription("Froot Loops", 20), 3);
+        Logger l = new LoggerPull("resources/log-pull.txt");
+        Register r = new Register(new Store("Push Store"), new SalePushFactory());
+        r.createNewSale();
+        r.addSaleObserver(l);
+        r.addNewLine(new ProductDescription("Milk", 10), 2);
+        r.addNewLine(new ProductDescription("Froot Loops", 20), 3);
         l.close();
     }
 }

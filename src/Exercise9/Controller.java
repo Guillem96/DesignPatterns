@@ -11,17 +11,9 @@ public class Controller implements Observer {
         SimpleTask s1 = new SimpleTask(new Money(10), 50);
         SimpleTask s2 = new SimpleTask(new Money(3), 50);
         SimpleTask s3 = new SimpleTask(new Money(5), 50);
-
-        // Add the controller and the complex task containing all the simple tasks as observers
-        s1.addObserver(this);
-        s1.addObserver(t);
-
-        s2.addObserver(this);
-        s2.addObserver(t);
-
-        s3.addObserver(this);
-        s3.addObserver(t);
-
+        t.addTask(s2);
+        t.addTask(s1);
+        t.addTask(s3);
         t.addObserver(this);
     }
 

@@ -1,8 +1,6 @@
 package Exercise9;
 
-import java.util.Observable;
-
-public class SimpleTask extends Observable implements Task {
+public class SimpleTask extends Task {
 
     private Money cost;
     private int duration;
@@ -25,8 +23,11 @@ public class SimpleTask extends Observable implements Task {
     }
 
     public void finalize() {
-        notifyObservers();
-        finalized = true;
+        if (!finalized) {
+            setChanged();
+            notifyObservers();
+            finalized = true;
+        }
     }
 
     @Override
