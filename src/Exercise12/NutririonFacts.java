@@ -10,7 +10,12 @@ public class NutririonFacts {
     private final int sodium;
     private final int carbohydrate;
 
-    public NutririonFacts(final int servingSize, final int servings, final int calories, final int fat, final int sodium, final int carbohydrate) {
+    public NutririonFacts(final int servingSize,
+                          final int servings,
+                          final int calories,
+                          final int fat,
+                          final int sodium,
+                          final int carbohydrate) {
         this.servingSize = servingSize;
         this.servings = servings;
         this.calories = calories;
