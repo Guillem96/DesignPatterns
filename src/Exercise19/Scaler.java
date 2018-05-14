@@ -34,12 +34,12 @@ public class Scaler implements FigureVisitor {
 
     @Override
     public void visit(Drawing f) {
-        scaled = new Drawing(f.getX(), f.getY());
+        Drawing currentScaled = new Drawing(f.getX(), f.getY());
         for(Figure figure : f.getFigures()) {
-            Scaler scaler = new Scaler(this.factor);
-            figure.accept(scaler);
-            ((Drawing)scaled).getFigures().add(scaler.getScaled());
+            figure.accept(this);
+            currentScaled.getFigures().add(this.getScaled());
         }
+        scaled = currentScaled;
     }
 
     public Figure getScaled() {
