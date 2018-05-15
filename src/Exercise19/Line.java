@@ -9,14 +9,6 @@ public class Line extends Figure {
         return y2;
     }
 
-    public void setX2(float x2) {
-        this.x2 = x2;
-    }
-
-    public void setY2(float y2) {
-        this.y2 = y2;
-    }
-
     private float x2;
     private float y2;
 

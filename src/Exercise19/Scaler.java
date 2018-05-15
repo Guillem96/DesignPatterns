@@ -1,5 +1,8 @@
 package Exercise19;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Scaler implements FigureVisitor {
 
     private int factor;
@@ -34,12 +37,13 @@ public class Scaler implements FigureVisitor {
 
     @Override
     public void visit(Drawing f) {
-        Drawing currentScaled = new Drawing(f.getX(), f.getY());
+
+        List<Figure> draw = new ArrayList<>();
         for(Figure figure : f.getFigures()) {
             figure.accept(this);
-            currentScaled.getFigures().add(this.getScaled());
+            draw.add(getScaled());
         }
-        scaled = currentScaled;
+        scaled = new Drawing(f.getX(), f.getY(), draw);
     }
 
     public Figure getScaled() {

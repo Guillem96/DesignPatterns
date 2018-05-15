@@ -14,6 +14,11 @@ public class Drawing extends Figure {
         super(x, y);
     }
 
+    Drawing(float x, float y, List<Figure> figures) {
+        super(x, y);
+        this.figures = figures;
+    }
+
     Drawing(Drawing d) {
         super(d);
     }

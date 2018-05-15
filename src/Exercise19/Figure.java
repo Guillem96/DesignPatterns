@@ -35,4 +35,8 @@ public abstract class Figure {
     public abstract Figure deepCopy();
 
     public abstract void accept(FigureVisitor visitor);
+
+    public Builder create() {
+        return new Builder();
+    }
 }

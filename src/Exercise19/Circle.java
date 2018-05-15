@@ -5,10 +5,6 @@ public class Circle extends Figure {
         return r;
     }
 
-    public void setR(float r) {
-        this.r = r;
-    }
-
     private float r;
 
     public Circle(float x, float y, float r) {
